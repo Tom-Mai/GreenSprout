@@ -13,9 +13,14 @@ a,li{
     list-style: none;
     text-decoration: none;
 }
+/* Font */
+a{
+    font-family: "Lora", serif;
+}
 body, html {
     height: 100vh;
 }
+/* HeroSection */
 .hero-section {
     background-image: url('./assets/images/bg-GreenSrout-Accuiel.webp');
     background-size: cover;
@@ -31,20 +36,31 @@ body, html {
         transition:  0.5s linear;
     }    
 }
-
+.callToAction{
+    position: absolute;
+    
+}
+/* NavBar */
 .navbar{
    position: relative;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(1px);
     z-index:'1100';
-}
-.callToAction{
-    position: absolute;
+    min-height:7em;
     
+}
+@media (min-width:502px){
+    .navbar{
+        min-height: 3em;
+    }
+}
+@media (min-width:1024px){
+    .navbar{
+        min-height: 5em;
+    }
 }
 /* Button */
 .btn-primary{
-    /* style="background-color: rgba(204, 85, 0, 0.8); color: white; border: none ;" */
     background-color:#c87c50;
     border: none;
     color: white;
@@ -56,9 +72,6 @@ body, html {
     padding: 2em 2em;
     text-transform:uppercase;
 }
-
-
-
 .btn-primary:hover, .btn-primary:active{
     background-color: #2b860bcc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
